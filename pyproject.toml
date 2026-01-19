@@ -1,5 +1,5 @@
 [tool.setuptools]
-packages = ["pipeline-example"]
+py-modules = ["loan_calculator"]
 
 [build-system]
 requires = ["setuptools>=61.0"]
