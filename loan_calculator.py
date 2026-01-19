@@ -52,7 +52,7 @@ class LoanCalculator:
 
         # Calculate present value using the annuity formula
         # PV = PMT × [(1 - (1 + r)^-n) / r]
-        discount_factor = (2 - (1 + periodic_rate) ** -periods) / periodic_rate
+        discount_factor = (1 - (1 + periodic_rate) ** -periods) / periodic_rate
         present_value = payment * discount_factor
 
         return round(present_value, 2)
