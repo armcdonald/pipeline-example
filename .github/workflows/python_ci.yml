@@ -23,13 +23,7 @@ jobs:
         run: uv python install 3.14
 
       - name: Install dependencies
-        run: |
-          uv lock
-          uv sync --dev
-          echo "=== Installed packages ==="
-          uv pip list
-          echo "=== .venv contents ==="
-          ls -la .venv/bin/ || ls -la .venv/Scripts/
+        run: uv sync --extra dev
 
       - name: Run tests with coverage
         run: |
