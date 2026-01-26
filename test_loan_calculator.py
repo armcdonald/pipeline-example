@@ -186,7 +186,7 @@ class TestEdgeCases:
             999_999_999,  # Just under max payment
             0.99,  # Just under max rate
             600,  # Max periods
-            12
+            12,
         )
         assert pv > 0
 

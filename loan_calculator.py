@@ -65,9 +65,7 @@ class LoanCalculator:
         if payment <= 0:
             raise ValueError("Payment must be positive")
         if payment > LoanCalculator.MAX_PAYMENT:
-            raise ValueError(
-                f"Payment cannot exceed ${LoanCalculator.MAX_PAYMENT:,.2f}"
-            )
+            raise ValueError(f"Payment cannot exceed ${LoanCalculator.MAX_PAYMENT:,.2f}")
 
     @staticmethod
     def _validate_interest_rate(rate: float) -> None:
@@ -107,9 +105,7 @@ def main():
 
     try:
         payment = float(input("Enter monthly payment amount: $"))
-        annual_rate = (
-            float(input("Enter annual interest rate (as %, e.g., 5.5): ")) / 100
-        )
+        annual_rate = float(input("Enter annual interest rate (as %, e.g., 5.5): ")) / 100
         years = int(input("Enter loan term in years: "))
 
         periods = years * 12
