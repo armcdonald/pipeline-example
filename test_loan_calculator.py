@@ -2,8 +2,9 @@
 Test cases for the Loan Calculator module.
 """
 
-from loan_calculator import LoanCalculator
 import pytest
+
+from loan_calculator import LoanCalculator
 
 
 class TestPresentValueCalculation:
